@@ -1,0 +1,35 @@
+@import "./common.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.firstSection {
+  background-color: $customGreen;
+}
+
+.secondSection {
+  background-color: $customOrange;
+}
+
+.thirdSection {
+  background-color: $customYellow;
+}
+
+.fourthSection {
+  background-color: $customBlue;
+}
+
+.fifthSection {
+  background-color: $customRed;
+}
+
+.activeLink {
+  font-weight: 500;
+}

@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import "./include-media";
+
+$customGreen: #00c1b5;
+$customYellow: #ffbe00;
+$customRed: #e30512;
+$customOrange: #ff651a;
+$customBlue: #1d3fbb;
+$textColor: #231f20;
+
+// @mixin section-container($marginTop: 0, $marginBottom: 0) {
+//   margin: $marginTop 8rem $marginBottom;
+//   border: 1px solid red;
+
+//   @include media("<=1280px") {
+//     margin: $marginTop 6rem $marginBottom;
+//   }
+
+//   @include media("<=tablet") {
+//     margin: $marginTop 5rem $marginBottom;
+//   }
+
+//   @include media("<=600px") {
+//     margin: $marginTop 4rem $marginBottom;
+//   }
+
+//   @include media("<=500px") {
+//     margin: $marginTop 3rem $marginBottom;
+//   }
+
+//   @include media("<=480px") {
+//     margin: $marginTop 2rem $marginBottom;
+//   }
+// }

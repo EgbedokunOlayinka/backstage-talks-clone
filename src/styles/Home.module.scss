@@ -1,0 +1,195 @@
+@import "./include-media";
+@import "./common.scss";
+
+.container {
+  transition: background-color 0.35s;
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100%;
+  color: $textColor;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  position: relative;
+  overflow-y: scroll;
+  @include media("<=991px") {
+    scroll-snap-type: y mandatory;
+  }
+
+  &[id="firstSection"] {
+    background: #000;
+  }
+}
+
+.header {
+  position: fixed;
+  margin-left: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.title {
+  font-weight: 700;
+  width: 250px;
+
+  @include media("<=991px") {
+    width: 220px;
+  }
+  @include media("<=768px") {
+    width: 200px;
+  }
+  @include media("<=phone") {
+    width: 160px;
+  }
+}
+
+.info {
+  position: fixed;
+  top: 0.5rem;
+  right: 1.25rem;
+
+  p {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  @include media("<=991px") {
+    display: none;
+  }
+}
+
+.anchors {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+
+  a {
+    text-decoration: none;
+    color: $textColor;
+    font-size: 1.1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include media("<=991px") {
+    display: none;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  width: 300px;
+
+  @include media("<=991px") {
+    position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    width: 80%;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  @include media("<=phone") {
+    width: 90%;
+  }
+}
+
+.footerContainer {
+  & > p:first-child {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  & > p:nth-child(2) {
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  a {
+    color: $textColor;
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & > p:last-child {
+    display: none;
+    @include media("<=991px") {
+      font-weight: 500;
+      font-size: 1.2rem;
+      display: block;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.main {
+  @include media("<=991px") {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+.mainContainer {
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  & > section {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    & > div {
+      display: grid;
+      grid-gap: 1rem;
+      text-align: center;
+      font-weight: 500;
+
+      & > p:first-of-type {
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+
+      a {
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.imgContainer {
+  position: relative;
+  width: 420px;
+
+  @include media("<=phone") {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
